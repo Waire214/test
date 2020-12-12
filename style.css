@@ -382,7 +382,7 @@ body{
             margin-top: 50px;
             height: 250px;
             background-color: rgb(255, 255, 255);
-            width: calc(100vw -10px);
+            width: calc(100vw - 10px);
             text-align: center;
         }
         .nav-box{
