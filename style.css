@@ -233,7 +233,7 @@ body{
     }
     .right{
         height: 360px;
-        width: calc(100vw - 10px);
+        width: 100vw;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
