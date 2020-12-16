@@ -71,9 +71,7 @@ body{
     grid-area: p-people; 
     color: white;
 } 
-.p-people1{
-    display: none;
-}
+
 .p-conversation { 
     grid-area: p-conversation;
     color: white; 
@@ -232,20 +230,21 @@ body{
         flex-wrap: wrap;
     }
     .right{
-        height: 360px;
-        width: 100vw;
+        height: 300px;
+        width: calc(100vw - 40px);
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: flex-start;
         justify-content: center;
         margin-left: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
     .twittericon { 
        margin-right: 00;
        margin-top: 00;
        color: rgb(46, 128, 236);
+       margin-bottom: 00;
       }
     .p-right2 { 
         font-size: 30px;
@@ -262,6 +261,7 @@ body{
       }
     .a-button-right { 
         width: calc(100vw - 40px);
+        
         border:  rgb(46, 128, 236) 1px solid;
         background-color:  rgb(46, 128, 236);
         color: white;
@@ -277,7 +277,7 @@ body{
       }
     .a-button-right2 { 
         width: calc(100vw - 40px);
-        border:  rgb(46, 128, 236) 1px solid;
+                border:  rgb(46, 128, 236) 1px solid;
         text-align: center;
         padding: 9px;
         margin-bottom: 10px;
@@ -306,41 +306,49 @@ body{
         align-items: center;
         background-image: url("twitter-background.jpg");
         background-repeat: no-repeat;
-        background-size: 700px;
+        background-size: 500px;
     }
     .grid-container {
         display: grid;
-        grid-template-columns: 0.2fr 1.5fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-columns: 0.2fr 0.2fr 1.5fr 0.2fr;
+        grid-template-rows: 1fr 1fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
-          "search p-seach"
-          "people p-people1"
-          ". p-people1"
-          "conversation p-conversation";
+          ". search p-seach ."
+          ". people p-people ."
+          ". conversation p-conversation .";
       }
     .search { 
+        grid-area: search;
         margin-top: 20px;
     }
     .people { 
+        grid-area: people;
         margin-top: 25px;
     }
       
     .conversation { 
+        grid-area: conversation;
         margin-top: 20px;
     }
     .p-seach { 
+        grid-area: p-seach;
         font-weight: bolder;
     }
       
     .p-people { 
+        grid-area: p-people; 
         font-weight: bolder;
-    }
+        color: white;
+    } 
       
     .p-conversation { 
+        grid-area: p-conversation;
         font-weight: bolder;
         margin-bottom: 20px; 
     }
+   
+      
     .mid-log {
         height: 40px;
         display: flex;
@@ -386,7 +394,7 @@ body{
             text-align: center;
         }
         .nav-box{
-            margin-left: 5px;
+            margin-left: 1px;
             margin-right: 5px;
             margin-top: 00;
         }
@@ -402,17 +410,17 @@ body{
             font-size: 14px;
     }
 }
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1024px){
     .right{
         height: 360px;
         width: 100vw;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
-        margin-left: calc(100vw /4);
         margin-bottom: 10px;
+        margin-left: 00;
     }
     .a-button-right { 
         width: calc(100vw / 2);
@@ -428,6 +436,7 @@ body{
         display: inline-block;
         cursor: pointer;
         margin-bottom: 20px;
+        margin-right: 00;
       }
     .a-button-right2 { 
         width: calc(100vw / 2);
@@ -441,6 +450,8 @@ body{
         border-radius: 25px;
         display: inline-block;
         cursor: pointer;
+        margin-right: 00;
+
       }
       .grid-container {
         display: grid;
@@ -470,5 +481,35 @@ body{
             background-position: top right;
             background-repeat: round;
         }
-    
+    .mid-log{
+        margin-left: 40px;
+        margin-right: 40px;
+        justify-content: space-around;
+    }
+    .signup { 
+        width: calc((100vw - 100px)/4);          
+        border:  rgb(46, 128, 236) 1px solid;
+        background-color:  rgb(46, 128, 236);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bolder;
+        border-radius: 25px;
+        display: inline-block;
+        cursor: pointer;
+      }
+    .login3 { 
+      width: calc((100vw - 80px)/4);          
+      border:  rgb(46, 128, 236) 1px solid;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bolder;
+        border-radius: 25px;
+        display: inline-block;
+        cursor: pointer;
+      }
 }
